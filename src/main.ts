@@ -9,7 +9,7 @@ async function run() {
     const labels = github.context!.payload!.pull_request!.labels;
     console.log(`PR labels: ${labels}`);
 
-    if (!labels.split(',').some(l => validLabels.includes(l))) {
+    if (!labels || labels === '' || !labels.split(',').some(l => validLabels.includes(l))) {
       core.setFailed(`Please select one of the required labels for this PR: ${validLabels}`);
     }
   } catch (error) {
