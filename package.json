@@ -1,0 +1,31 @@
+{
+  "name": "require-label-action",
+  "version": "1.0.0",
+  "description": "Require PR labels for Github Actions",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write src/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yogevbd/require-label-action.git"
+  },
+  "keywords": [
+    "actions",
+    "github",
+    "labels",
+    "lint"
+  ],
+  "author": "Yogev Ben David <yogev132@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/github": "^1.0.0",
+    "@actions/core": "^1.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.1",
+    "@types/node": "^12.0.4",
+    "typescript": "^3.5.1"
+  }
+}
