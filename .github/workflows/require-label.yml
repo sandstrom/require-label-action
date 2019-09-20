@@ -1,10 +1,13 @@
-name: Require PR labels for Github Actions
+name: Require PR label
 
-on: [pull_request]
+on:
+  pull_request:
+    types: [labeled, unlabeled]
 
 jobs:
   require-label:
     runs-on: ubuntu-latest
+    id: requirelabel
     steps:
     - uses: yogevbd/require-label-action@master
       with:
