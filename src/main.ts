@@ -7,10 +7,9 @@ async function run() {
     core.debug(`Verified PR match valid labels: ${validLabels}`);
 
     const labels = github.context!.payload!.pull_request!.labels;
-    console.log(`PR labels: ${labels}`);
     console.log(`PR labels: ${JSON.stringify(labels)}`);
 
-    if (!labels || labels === '' || !labels.split(',').some(l => validLabels.includes(l))) {
+    if (!labels.some(l => validLabels.includes(l.name))) {
       core.setFailed(`Please select one of the required labels for this PR: ${validLabels}`);
     }
   } catch (error) {
