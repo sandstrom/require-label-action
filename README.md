@@ -15,5 +15,5 @@ jobs:
     steps:
     - uses: yogevbd/require-label-action@master
       with:
-        valid-labels: ["bug", "enhancement", "feature"]
+        valid-labels: "bug,enhancement,feature"
 ```

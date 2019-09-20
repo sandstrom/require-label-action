@@ -8,4 +8,4 @@ inputs:
   valid-labels:
     description: 'Verify PR label'
     required: true
-    default: ["bug", "enhancement", "feature"]
+    default: "bug,enhancement,feature"

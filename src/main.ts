@@ -3,7 +3,7 @@ import * as github from '@actions/github';
 
 async function run() {
   try {
-    const validLabels = core.getInput('valid-labels', {required: true});
+    const validLabels = core.getInput('valid-labels', {required: true}).split(',');
     core.debug(`Verified PR match valid labels: ${validLabels}`);
 
     const labels = github.context!.payload!.pull_request!.labels.split(',');
